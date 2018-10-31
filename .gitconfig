@@ -1,0 +1,19 @@
+[user]
+	email = mellison@doctorlogic.com
+	name = Matthew Ellison
+[alias]
+	unstage = reset --
+	UndoBranch = 
+	u = checkout .
+	ut = echo 'test'
+	hist = log --oneline dev..
+	hist2 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	histme =  log --pretty=oneline --author='Matthew Ellison'
+	unstage = reset HEAD
+	resetme = clean -fd
+	branches = !git for-each-ref --sort=-committerdate refs/heads/* --format='%(committerdate:iso) %(refname:short) (%(contents:subject))'
+	undomerge = reset --hard HEAD^
+
+[core]
+	autocrlf = false
+	safecrlf = true
