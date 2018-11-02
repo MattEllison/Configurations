@@ -3,7 +3,7 @@
 #git shorthands
 alias gs='git status'
 alias gc='git checkout'
-alias gm='git merge dev --no-cmmit --no-ff'
+alias gmd='git merge dev --no-cmmit --no-ff'
 
 #Save my configs to github
 alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c'
