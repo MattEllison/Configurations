@@ -1,4 +1,6 @@
 alias gs="git status"
 alias c=clear
-alias code="cd c:code/strategysearch.master/Source"
+alias mycode="cd 
+c:code/strategysearch.master/Source"
 alias lsa="ls -a"
+alias testcode="cd c:testcode"
