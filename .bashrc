@@ -1,3 +1,5 @@
+
+
 #git shorthands
 alias gs="git status"
 alias gc='git checkout'
