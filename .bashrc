@@ -11,7 +11,7 @@ alias gmdu='git checkout .'
 alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c'
 
 alias c=clear
-alias mc="cd c:code/strategysearch.master/Source"
+alias ss="cd c:code/strategysearch.master/Source"
 alias lsa='ls -a'
 alias tc='cd c:testcode'
 alias npp="C:\\\Program\ Files\ \(x86\)\\\Notepad++\\\notepad++.exe"
