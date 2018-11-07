@@ -7,6 +7,7 @@ alias gmd='git merge dev --no-commit --no-ff'
 alias gmdc='git commit -m "merge dev"'
 alias gmdu='git checkout .'
 alias gsl='git stash list'
+alias gco='git checkout'
 
 function gsa(){
 	local __index=$1
