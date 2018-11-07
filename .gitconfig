@@ -6,7 +6,7 @@
 	UndoBranch = 
 	u = checkout .
 	ut = echo 'test'
-	hist = log --oneline dev..
+	hist = log --oneline .
 	hist2 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	histme =  log --pretty=oneline --author='Matthew Ellison'
 	unstage = reset HEAD

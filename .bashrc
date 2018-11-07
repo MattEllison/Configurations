@@ -2,7 +2,7 @@
 
 #git shorthands
 alias gs='git status'
-alias gc='git checkout'
+alias gc='git commit -m'
 alias gmd='git merge dev --no-commit --no-ff'
 alias gmdc='git commit -m "merge dev"'
 alias gmdu='git checkout .'
