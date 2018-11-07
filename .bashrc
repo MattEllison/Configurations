@@ -1,10 +1,19 @@
 
+
 #git shorthands
 alias gs='git status'
 alias gc='git checkout'
 alias gmd='git merge dev --no-commit --no-ff'
 alias gmdc='git commit -m "merge dev"'
 alias gmdu='git checkout .'
+alias gsl='git stash list'
+
+function gsa(){
+	local __index=$1
+	echo "Unstashing $__index"
+	git stash apply stash@{$__index}
+}
+
 
 #Used for creating a new git project
 alias ng="git init;echo first file > firstfile.txt;git add .;git commit -m 'first commit';"
