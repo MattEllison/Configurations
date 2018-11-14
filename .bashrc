@@ -35,12 +35,16 @@ alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git 
 function saveglob(){
 	local __c=$(pwd);
 	cd c:globals;
+
+	#Git my global configs
 	cp ~/.bashrc .; 
 	cp ~/.gitconfig .;
         cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
+
 	git add .;
 	git commit -m "updated globals";
 	git push;
+
 	cd $__c;
 }
 
