@@ -9,6 +9,8 @@ alias gmdu='git checkout .'
 alias gsl='git stash list'
 alias gco='git checkout'
 alias gdf='git diff --compact-summary'
+alias gb='git branches | head'
+alias get='git'
 
 function gsa(){
 	local __index=$1
