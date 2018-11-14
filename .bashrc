@@ -13,7 +13,7 @@ alias gb='git branches | head'
 alias get='git'
 alias s='echo ------'
 alias gr='git reflog;s'
-alias gl='git log;s'
+alias gl='git log --oneline;s'
 
 function gsa(){
 	local __index=$1
