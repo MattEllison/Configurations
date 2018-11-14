@@ -12,8 +12,8 @@ alias gdf='git diff --compact-summary'
 alias gb='git branches | head'
 alias get='git'
 alias s='echo ------'
-alias gr='git reflog;s'
-alias gl='git log --oneline;s'
+alias gr='echo 'GIT REFLOG';git reflog;s'
+alias gl='echo 'GIT LOG';git log --oneline;s'
 
 function gsa(){
 	local __index=$1
