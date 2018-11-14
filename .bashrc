@@ -33,6 +33,6 @@ alias npp="C:\\\Program\ Files\ \(x86\)\\\Notepad++\\\notepad++.exe"
 alias e="nano"
 alias eb='nano ~/.bashrc'
 alias eg='nano ~/.gitconfig'
-
+alias reh='rm -rf .'
 
 
