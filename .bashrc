@@ -1,4 +1,6 @@
-#Command prompot settings
+#Command prompt settings
+#helpful site = https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+
 PS1='\[\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\nλ '
 
 
@@ -29,6 +31,18 @@ alias ng="git init;echo first file > firstfile.txt;git add .;git commit -m 'firs
 
 #Save my configs to github
 alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
+
+function saveglob(){
+	c=$(pwd);
+	cd c:globals;
+	cp ~/.bashrc .; 
+	cp ~/.gitconfig .;
+        cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
+	git add .;
+	git commit -m "updated globals";
+	git push;
+	
+}
 
 alias c=clear
 alias ss="cd c:code/strategysearch.master/Source"
