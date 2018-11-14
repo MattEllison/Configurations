@@ -24,7 +24,7 @@ function gsa(){
 alias ng="git init;echo first file > firstfile.txt;git add .;git commit -m 'first commit';"
 
 #Save my configs to github
-alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c'
+alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
 
 alias c=clear
 alias ss="cd c:code/strategysearch.master/Source"
