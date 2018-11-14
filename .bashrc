@@ -1,3 +1,5 @@
+#Command prompot settings
+PS1='\[\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\nλ '
 
 
 #git shorthands
@@ -12,8 +14,8 @@ alias gdf='git diff --compact-summary'
 alias gb='git branches | head'
 alias get='git'
 alias s='echo ------'
-alias gr='echo 'GIT REFLOG';git reflog;s'
-alias gl='echo 'GIT LOG';git log --oneline;s'
+alias gr='echo "GIT REFLOG";git reflog;s'
+alias gl='echo "GIT LOG";git log --oneline;s'
 
 function gsa(){
 	local __index=$1
