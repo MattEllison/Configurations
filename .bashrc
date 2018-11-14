@@ -1,16 +1,17 @@
 
 
 #git shorthands
-alias gs='git status'
+alias gs='git status;s'
 alias gc='git commit -m'
 alias gmd='git merge dev --no-commit --no-ff'
 alias gmdc='git commit -m "merge dev"'
 alias gmdu='git checkout .'
-alias gsl='git stash list'
+alias gsl='git stash list;s'
 alias gco='git checkout'
 alias gdf='git diff --compact-summary'
 alias gb='git branches | head'
 alias get='git'
+alias s='echo ------'
 
 function gsa(){
 	local __index=$1
