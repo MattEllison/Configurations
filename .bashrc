@@ -33,7 +33,7 @@ alias ng="git init;echo first file > firstfile.txt;git add .;git commit -m 'firs
 alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
 
 function saveglob(){
-	c=$(pwd);
+	local __c=$(pwd);
 	cd c:globals;
 	cp ~/.bashrc .; 
 	cp ~/.gitconfig .;
@@ -41,7 +41,7 @@ function saveglob(){
 	git add .;
 	git commit -m "updated globals";
 	git push;
-	
+	cd $__c;
 }
 
 alias c=clear
