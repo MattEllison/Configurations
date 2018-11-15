@@ -19,7 +19,7 @@ alias gr='echo "GIT REFLOG";git reflog'
 alias gl='echo "GIT LOG";git log --oneline'
 
 function gco(){
-	if test $# -ne 1;then echo -e "\e[31mNeed 1 Arg";return 0;fi;
+	if test $# -ne 1;then echo -e "\e[31mNeed 1 Argument";return 0;fi;
 	git checkout $1	
 }
 
