@@ -11,12 +11,18 @@ alias gmd='git merge dev --no-commit --no-ff'
 alias gmdc='git commit -m "merge dev"'
 alias gmdu='git checkout .'
 alias gsl='git stash list'
-alias gco='git checkout'
+#alias gco='git checkout'
 alias gdf='git diff --compact-summary'
 alias gb='git branches | head'
 alias get='git'
 alias gr='echo "GIT REFLOG";git reflog'
 alias gl='echo "GIT LOG";git log --oneline'
+
+function gco(){
+	if test $# -ne 1;then echo -e "\e[31mNeed 1 Arg";return 0;fi;
+	git checkout $1	
+}
+
 
 #Allows me to unstage a particular index
 function gsa(){
