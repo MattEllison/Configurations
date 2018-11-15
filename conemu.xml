@@ -569,12 +569,12 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="&lt;Startup&gt;" modified="2018-11-15 13:01:50" build="180528">
+				<key name="&lt;Startup&gt;" modified="2018-11-15 14:07:36" build="180528">
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Active" type="long" data="1"/>
+					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="2"/>
-					<value name="Cmd1" type="string" data='&gt;* -cur_console:f -cur_console:d:c:/code/strategysearch.master/Source -cur_console:C:"C:\cmder v1.3.6 - full\icons\cmder.ico" cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"'/>
-					<value name="Cmd2" type="string" data='* -cur_console:bs1T52V -cur_console:d:c:\testcode -cur_console:C:"C:\cmder v1.3.6 - full\icons\cmder.ico" cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"'/>
+					<value name="Cmd1" type="string" data='* -cur_console:f -cur_console:d:c:/code/strategysearch.master/Source -cur_console:C:"C:\cmder v1.3.6 - full\icons\cmder.ico" cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"'/>
+					<value name="Cmd2" type="string" data='&gt;* -cur_console:bs1T52V -cur_console:d:c:\testcode -cur_console:C:"C:\cmder v1.3.6 - full\icons\cmder.ico" cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"'/>
 				</key>
 				<key name="Task10" modified="2018-11-08 07:03:50" build="180528">
 					<value name="Name" type="string" data="{WSL::bash}"/>
