@@ -35,12 +35,17 @@ alias reh='find -delete'
 
 #Save my configs to github
 #alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
+function st(){
+	local __mine=$*;
+	echo $__mine;
+}
 function sg(){
 	local __c=$(pwd);
 	cd c:globals;
 	git pull;
 
 	#Git my global configs
+	cp ~/.exrc; #Vim configuration
 	cp ~/.bashrc .; 
 	cp ~/.gitconfig .;
         cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
@@ -66,8 +71,8 @@ alias npp="C:\\\Program\ Files\ \(x86\)\\\Notepad++\\\notepad++.exe"
 alias e="nano"
 
 #I just wanted to easily added to my config files
-alias eb='nano ~/.bashrc'
-alias eg='nano ~/.gitconfig'
+alias eb='vim ~/.bashrc'
+alias eg='vim ~/.gitconfig'
 
 
 
