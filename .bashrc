@@ -36,22 +36,25 @@ alias reh='find -delete'
 #Save my configs to github
 #alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
 function st(){
-	local __mine=$*;
-	echo $__mine;
-}
-function sg(){
+	#Check if commit message was passed
+	local __commitMessage="$*";
+	if [ -z "$1" ]
+	then
+		__commitMessage='updated globals';
+	fi
+
 	local __c=$(pwd);
 	cd c:globals;
 	git pull;
 
 	#Git my global configs
-	cp ~/.exrc; #Vim configuration
+	cp ~/.exrc .; #Vim configuration
 	cp ~/.bashrc .; 
 	cp ~/.gitconfig .;
         cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
 
 	git add .;
-	git commit -m "updated globals";
+	git commit -m "$__commitMessage";
 	git push;
 
 	cd $__c;
