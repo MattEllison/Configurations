@@ -5,20 +5,20 @@
 PS1='\n\[[\033[\33m\]DIR \w]\033[36m\]`__git_ps1`\[\033[0m\]\nSmart Stuff Here --> '
 
 #git shorthands
-alias gs='git status;s'
+alias gs='git status'
 alias gc='git commit -m'
 alias gmd='git merge dev --no-commit --no-ff'
 alias gmdc='git commit -m "merge dev"'
 alias gmdu='git checkout .'
-alias gsl='git stash list;s'
+alias gsl='git stash list'
 alias gco='git checkout'
 alias gdf='git diff --compact-summary'
 alias gb='git branches | head'
 alias get='git'
-alias s='echo ------'
-alias gr='echo "GIT REFLOG";git reflog;s'
-alias gl='echo "GIT LOG";git log --oneline;s'
+alias gr='echo "GIT REFLOG";git reflog'
+alias gl='echo "GIT LOG";git log --oneline'
 
+#Allows me to unstage a particular index
 function gsa(){
 	local __index=$1
 	echo "Unstashing $__index"
@@ -31,7 +31,6 @@ alias ng="git init;echo first file > firstfile.txt;git add .;git commit -m 'firs
 
 #Save my configs to github
 #alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
-
 function sg(){
 	local __c=$(pwd);
 	cd c:globals;
@@ -50,12 +49,22 @@ function sg(){
 
 alias c=clear
 alias ss="cd c:code/strategysearch.master/Source"
+
+#List all hidden files
 alias lsa='ls -a'
+
+#Location of my test code
 alias tc='cd c:testcode'
 alias npp="C:\\\Program\ Files\ \(x86\)\\\Notepad++\\\notepad++.exe"
+
+#e=Edit for my editor of choice
 alias e="nano"
+
+#I just wanted to easily added to my config files
 alias eb='nano ~/.bashrc'
 alias eg='nano ~/.gitconfig'
+
+#Added this mostly for playing around with git. Allows me to delete everything in the respective folder and start over.
 alias reh='find -delete'
 
 
