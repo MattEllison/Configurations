@@ -38,6 +38,7 @@ alias reh='find -delete'
 function sg(){
 	local __c=$(pwd);
 	cd c:globals;
+	git pull;
 
 	#Git my global configs
 	cp ~/.bashrc .; 
