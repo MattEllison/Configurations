@@ -35,7 +35,7 @@ alias reh='find -delete'
 
 #Save my configs to github
 #alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
-function st(){
+function sg(){
 	#Check if commit message was passed
 	local __commitMessage="$*";
 	if [ -z "$1" ]
