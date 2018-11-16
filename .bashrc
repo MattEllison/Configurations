@@ -6,7 +6,16 @@ PS1='\n\[[\033[\33m\]DIR \w]\033[36m\]`__git_ps1`\[\033[0m\]\nSmart Stuff Here -
 
 #git shorthands
 alias gs='git status'
-alias gc='git commit -m'
+#alias gc='git commit -m'
+function gc(){
+	if test $# -eq 0; then echo -e "\e[31mNeed Commit Mesage"; return 0;fi;
+	hasUntrackedFiles=$(git status | grep 'Untracked' | wc -l);
+	hasunStagedFiles=$(git status | grep 'Changes not staged for commit' | wc -l);
+	echo "Has Untracked Files - $hasUntrackedFiles";
+	echo "Has Unstaged files - $hasunStagedFiles"
+	if test "$hasUntrackedFiles$hasunStagedFiles" -eq "00"; then echo 'nope';return 0; fi;
+}
+
 alias gmd='git merge dev --no-commit --no-ff'
 alias gmdc='git commit -m "merge dev"'
 alias gmdu='git checkout .'
