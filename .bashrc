@@ -15,6 +15,8 @@ function gc(){
 #	echo "Has Unstaged files - $hasunStagedFiles"
 	if test "$hasUntrackedFiles$hasunStagedFiles" -ne "00"; then echo -e '\e[31mCanelling Commit. Looks like you forgot some files. \n\nRunning Git Status\n\n\e[0m';git status;return 0; fi;
 	
+	#If all test passed
+	git commit -m "$*"
 }
 
 alias gmd='git merge dev --no-commit --no-ff'
