@@ -20,6 +20,8 @@ function nb(){
 }
 
 
+
+
 function loadlist(){
 	cat ~/branchlist.txt | while read line;do
 		key="${line/,*}";
