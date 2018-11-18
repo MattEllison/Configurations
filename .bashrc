@@ -70,7 +70,7 @@ function sg(){
 	cp ~/.bashrc .; 
 	cp ~/.gitconfig .;
         cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
-
+	cp -r ~/functions .;
 	git add .;
 	git commit -m "$__commitMessage";
 	git push;
@@ -89,21 +89,10 @@ alias tc='cd c:testcode'
 alias npp="C:\\\Program\ Files\ \(x86\)\\\Notepad++\\\notepad++.exe"
 
 #e=Edit for my editor of choice
-alias e="nano"
+alias e="vim"
 
 #I just wanted to easily added to my config files
 alias eb='vim ~/.bashrc'
 alias eg='vim ~/.gitconfig'
 
-declare -A branchNames;
-branchNames[test]='hello';
-
-
-#--Local Branch Name helper
-function nameBranch(){
-	branchNames[$1]=$2;
-}
-
-function lb(){
-	for K in "${!branchNames[@]}"; do echo $K --- ${branchNames[$K]};  done 
-}
+~/functions/branchdescriptions.sh
