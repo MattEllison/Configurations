@@ -95,4 +95,4 @@ alias e="vim"
 alias eb='vim ~/.bashrc'
 alias eg='vim ~/.gitconfig'
 
-~/functions/branchdescriptions.sh
+. ~/functions/branchdescriptions.sh
