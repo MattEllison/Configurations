@@ -9,22 +9,27 @@ function nameBranch(){
 
 function lb(){
 	echo 
-	for K in "${!branchNames[@]}"; do echo -e "$K \t ${branchNames[$K]}";  done 
+#	for K in "${!branchNames[@]}"; do echo -e "$K \t ${branchNames[$K]}";  done
 }
 
 function nb(){
-	branchNames[$1]=$2;
-	rm mattslist
-	for K in "${!branchNames[@]}"; do echo -e "$K,${branchNames[$K]}" >> mattslist;  done 
+	echo -e "$1,$2" >> ~/branchlist.txt
+	#branchNames[$1]=$2;
+	#rm mattslist
+	#for K in "${!branchNames[@]}"; do echo -e "$K,${branchNames[$K]}" >> mattslist;  done 
 }
-test='what';
+
+
 function loadlist(){
-	cat mattslist | while read line;do
+	cat ~/branchlist.txt | while read line;do
 		key="${line/,*}";
-		value=${line#*,};
-		branchNames[$key]=$value;
+		value="${line#*,}";
+		echo $key $value
+		#nb $key $value
+		#branchNames["$key"]="$value";
+		#lb
 		#  grep -P '\t':w
 		#$line
-	done;
+	done ;
 }
 
