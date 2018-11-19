@@ -7,6 +7,10 @@ PS1='\n\[[\033[\33m\]DIR \w]\033[36m\]`__git_ps1`\[\033[0m\]\nSmart Stuff Here -
 #git shorthands
 alias gs='git status'
 #alias gc='git commit -m'
+function gcb(){
+	local currentBranch=$(git branch | grep \* | cut -d ' ' -f2);
+
+}
 function gc(){
 	if test $# -eq 0; then echo -e "\e[31mNeed Commit Mesage"; return 0;fi;
 	hasUntrackedFiles=$(git status | grep 'Untracked' | wc -l);
