@@ -1,9 +1,8 @@
 #Command prompt settings
 #helpful site = https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
 
-PS1='\[\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\nλ '
-
-#PS1='\n\[[\033[\33m\]DIR \w]\033[36m\]`__git_ps1`\[\033[0m\]\nSmart Stuff Here --> '
+#PS1='\[\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\nλ '
+PS1='\n\[[\033[\33m\]DIR \w]\033[36m\]`__git_ps1`\[\033[0m\]\nSmart Stuff Here --> '
 
 #git shorthands
 alias gs='git status'
@@ -100,4 +99,4 @@ alias e="vim"
 alias eb='vim ~/.bashrc'
 alias eg='vim ~/.gitconfig'
 
-#. ~/functions/branchdescriptions.sh
+. ~/functions/branchdescriptions.sh
