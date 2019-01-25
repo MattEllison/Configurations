@@ -14,6 +14,7 @@
 	branches = !git for-each-ref --sort=-committerdate refs/heads/* --format='%(committerdate:iso) %(refname:short) (%(contents:subject))'
 	undomerge = reset --hard HEAD^
 	diffdev = diff dev --compact-summary
+	remotes = remote -v
 
 [core]
 	autocrlf = false

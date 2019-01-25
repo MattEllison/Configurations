@@ -1,5 +1,12 @@
 #Command prompt settings
 #helpful site = https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+#helpful site fo autocompleteion
+#https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial.html
+
+
+
+#complete -W $(git rev-parse --abbrev-ref HEAD) gc
+#complete -W "what what" what
 
 #PS1='\[\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\nλ '
 PS1='\n\[[\033[\33m\]DIR \w]\033[36m\]`__git_ps1`\[\033[0m\]\nSmart Stuff Here --> '
@@ -11,6 +18,13 @@ function gcb(){
 	local currentBranch=$(git branch | grep \* | cut -d ' ' -f2);
 
 }
+#Add Autocomplete to
+function gcb_autoComplete(){
+  C=$(git rev-parse --abbrev-ref HEAD)   
+  COMPREPLY+=("$C")
+}
+complete -F gcb_autoComplete gc
+
 function gc(){
 	if test $# -eq 0; then echo -e "\e[31mNeed Commit Mesage"; return 0;fi;
 	hasUntrackedFiles=$(git status | grep 'Untracked' | wc -l);
@@ -57,17 +71,10 @@ alias reh='find -delete'
 
 #Save my configs to github
 #alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
-function sg(){
-	#Check if commit message was passed
-	local __commitMessage="$*";
-	if [ -z "$1" ]
-	then
-		__commitMessage='updated globals';
-	fi
+function bringGlobalsHome(){
 
-	local __c=$(pwd);
 	cd c:globals;
-	git pull;
+	
 
 	#Git my global configs
 	cp ~/.exrc .; #Vim configuration
@@ -75,6 +82,18 @@ function sg(){
 	cp ~/.gitconfig .;
         cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
 	cp -r ~/functions .;
+}
+function sg(){
+	#Check if commit message was passed
+	local __commitMessage="$*";
+	if [ -z "$1" ]
+	then
+		__commitMessage='updated globals';
+	fi
+	
+	local __c=$(pwd);			
+	bringGlobalsHome
+	git pull;
 	git add .;
 	git commit -m "$__commitMessage";
 	git push;
