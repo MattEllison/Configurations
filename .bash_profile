@@ -49,6 +49,9 @@ function gsa(){
 	git stash apply stash@{$__index}
 }
 
+#auto complete
+function gc_autoComplete(){   C=$(git rev-parse --abbrev-ref HEAD)   COMPREPLY+=("$C") } 
+complete -F gc_autoComplete gc
 
 #Used for creating a new git project
 alias ng="git init;echo first > file;git add .;git commit -m 'first commit';"
