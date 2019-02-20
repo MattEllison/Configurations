@@ -1,4 +1,4 @@
-PS1="\[\033[33;1m\]\w\[\033[m\] \[\033[31m\]\$(parse_git_branch) -->  "
+PS1="\w \[\033[33m\]\]\$(parse_git_branch) \[\033[00m\] $ "
 CLICOLOR=1
  LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
@@ -58,7 +58,7 @@ alias reh='find -delete'
 
 
 #Save my configs to github
-#alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
+#alias sg='c=$(pwd);cd c:Configurations;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
 function sg(){
 	#Check if commit message was passed
 	local __commitMessage="$*";
@@ -68,7 +68,7 @@ function sg(){
 	fi
 
 	local __c=$(pwd);
-	cd ~/code/Configurations;
+	cd c:/Configurations;
 	git pull;
 
 	#Git my global configs
