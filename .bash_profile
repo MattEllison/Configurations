@@ -1,9 +1,7 @@
-PS1="\[\033[33;1m\]\w\[\033[m\] \[\033[32m\]\$(parse_git_branch) -->  "
+PS1="\w \[\033[33m\]\]\$(parse_git_branch) \[\033[00m\] $ "
 CLICOLOR=1
  LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
-
-PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -51,6 +49,12 @@ function gsa(){
 	git stash apply stash@{$__index}
 }
 
+#auto complete
+function gc_autoComplete(){   
+	C=$(git rev-parse --abbrev-ref HEAD)   
+	COMPREPLY+=("$C") 
+} 
+complete -F gc_autoComplete gc
 
 #Used for creating a new git project
 alias ng="git init;echo first > file;git add .;git commit -m 'first commit';"
@@ -60,7 +64,7 @@ alias reh='find -delete'
 
 
 #Save my configs to github
-#alias sg='c=$(pwd);cd c:globals;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
+#alias sg='c=$(pwd);cd c:Configurations;cp ~/.bashrc .; cp ~/.gitconfig .;git add .;git commit -m "updated globals";git push;cd $c;s'
 function sg(){
 	#Check if commit message was passed
 	local __commitMessage="$*";
@@ -70,13 +74,12 @@ function sg(){
 	fi
 
 	local __c=$(pwd);
-	cd ~/code/Configurations;
+	cd c:/Configurations;
 	git pull;
 
 	#Git my global configs
 	cp ~/.vimrc .; #Vim configuration
 	cp ~/.bash_profile .; 
-	cp ~/.config/karabiner/karabiner.json .;
 	#cp ~/.gitconfig .;
         #cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
 	#cp -r ~/functions .;
