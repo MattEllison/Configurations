@@ -80,7 +80,7 @@ function sg(){
 	#Git my global configs
 	cp ~/.vimrc .; #Vim configuration
 	cp ~/.bash_profile .; 
-	#cp ~/.gitconfig .;
+	cp ~/.gitconfig .;
         #cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
 	#cp -r ~/functions .;
 	git add .;

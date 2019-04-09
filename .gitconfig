@@ -11,7 +11,10 @@
 	histme =  log --pretty=oneline --author='Matthew Ellison'
 	unstage = reset HEAD
 	resetme = clean -fd
-	branches = !git for-each-ref --sort=-committerdate refs/heads/* --format='%(committerdate:iso) %(refname:short) (%(contents:subject))'
+	
+	branches = !git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	branches2 = !git for-each-ref --sort=-committerdate refs/heads/* --format='%(committerdate:iso) %(refname:short) (%(contents:subject))'
+
 	undomerge = reset --hard HEAD^
 	diffdev = diff dev --compact-summary
 	remotes = remote -v
