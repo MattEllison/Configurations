@@ -5,14 +5,14 @@
 	unstage = reset --
 	UndoBranch = 
 	u = checkout .
-	ut = echo 'test'
+	ut = !echo 'test' && echo  what
 	hist = log --oneline --max-count=10 
 	hist2 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	histme =  log --pretty=oneline --author='Matthew Ellison'
 	unstage = reset HEAD
 	resetme = clean -fd
 	
-	branches = !git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	branches = !echo '__' && git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' && echo '__'
 	branches2 = !git for-each-ref --sort=-committerdate refs/heads/* --format='%(committerdate:iso) %(refname:short) (%(contents:subject))'
 
 	undomerge = reset --hard HEAD^
