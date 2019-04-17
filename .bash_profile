@@ -91,7 +91,7 @@ function sg(){
 }
 
 alias c=clear
-alias ss="cd c:code/strategysearch.master/Source"
+alias ss="cd c:code/Source"
 #List all hidden files
 alias lsa='ls -a'
 
