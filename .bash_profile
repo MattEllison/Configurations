@@ -103,6 +103,7 @@ alias npp="C:\\\Program\ Files\ \(x86\)\\\Notepad++\\\notepad++.exe"
 alias e="vim"
 
 #I just wanted to easily added to my config files
-alias eb='vim ~/.bash_profile'
-alias eg='vim ~/.gitconfig'
-
+#alias eb='vim ~/.bash_profile'
+#alias eg='vim ~/.gitconfig'
+alias eb='npp ~/.bash_profile'
+alias eg='npp ~/.gitconfig'
