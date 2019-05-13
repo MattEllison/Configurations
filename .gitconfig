@@ -22,6 +22,7 @@
 [core]
 	autocrlf = false
 	safecrlf = false
+	editor = \"C:\\Users\\matthewellison\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe\" \"--diff\"  \"$LOCAL\" \"$REMOTE\"
 	
 [diff]
 	tool = vscode

@@ -83,6 +83,11 @@ function sg(){
 	cp ~/.gitconfig .;
         #cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
 	#cp -r ~/functions .;
+	
+	#Get my Vscode Settings
+	cp ~/AppData/Roaming/Code/User/keybindings.json ./vscode
+	cp ~/AppData/Roaming/Code/User/settings.json ./vscode
+	
 	git add .;
 	git commit -m "$__commitMessage";
 	git push;
