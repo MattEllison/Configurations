@@ -87,7 +87,7 @@ function sg(){
 	#Get my Vscode Settings
 	cp ~/AppData/Roaming/Code/User/keybindings.json ./vscode
 	cp ~/AppData/Roaming/Code/User/settings.json ./vscode
-	
+	cp ~/AppData\Roaming/Code/User/snippets/. ./vscode
 	git add .;
 	git commit -m "$__commitMessage";
 	git push;
