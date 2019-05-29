@@ -17,5 +17,6 @@
         "--command=usr/bin/bash.exe",
         "-l",
         "-i"
-    ]
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }

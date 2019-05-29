@@ -17,7 +17,6 @@
 	// }
 	"React Function": {
 		"prefix": "rfn",
-		"scope": "typescript",
 		"body": [
 			"import React from 'react'",
 			"",
@@ -26,6 +25,7 @@
 			"}",
 			"",
 			"export const ${TM_FILENAME_BASE} = ({ }: Props) => {",
+			"return <></>",
 			"",
 			"}",
 		]

@@ -96,7 +96,7 @@ function sg(){
 }
 
 alias c=clear
-alias ss="cd c:code/Source"
+alias ss="cd c:code/"
 #List all hidden files
 alias lsa='ls -a'
 
