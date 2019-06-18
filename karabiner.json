@@ -1319,6 +1319,30 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "End key to the end of the line (Control + e)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "end",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "e",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
