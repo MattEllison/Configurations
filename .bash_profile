@@ -82,7 +82,7 @@ function sg(){
 	cp ~/.bash_profile .; 
 	cp ~/.gitconfig .;
 	cp ~/karabiner.json .;
-	cp ~/conEmu.xml
+	cp ~/ConEmu.xml
         #cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
 	#cp -r ~/functions .;
 	
