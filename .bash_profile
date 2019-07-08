@@ -82,11 +82,13 @@ function sg(){
 	cp ~/.bash_profile .; 
 	cp ~/.gitconfig .;
 	cp ~/karabiner.json .;
-	cp ~/ConEmu.xml .;
-        #cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
+	#cp ~/ConEmu.xml .;
+	#cp C:\cmder\vendor\conemu-maximus5\ConEmu.xml .;
+    cp c\:/cmder/vendor/conemu-maximus5/conemu.xml .
 	#cp -r ~/functions .;
 	
 	#Get my Vscode Settings
+	
 	cp ~/AppData/Roaming/Code/User/keybindings.json ./vscode
 	cp ~/AppData/Roaming/Code/User/settings.json ./vscode
 	cp -r ~/AppData/Roaming/Code/User/snippets/. ./vscode/snippets
