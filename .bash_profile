@@ -83,8 +83,14 @@ function sg(){
 	cp ~/.gitconfig .;
 	cp ~/karabiner.json .;
 	#cp ~/ConEmu.xml .;
-	#cp C:\cmder\vendor\conemu-maximus5\ConEmu.xml .;
-    cp c\:/cmder/vendor/conemu-maximus5/conemu.xml .
+	FILE=c\:/cmder/vendor/conemu-maximus5/conemu.xml
+	if test -f "$FILE"; then
+		echo "$FILE exist"
+		cp c\:/cmder/vendor/conemu-maximus5/conemu.xml .
+	fi
+
+
+
 	#cp -r ~/functions .;
 	
 	#Get my Vscode Settings
