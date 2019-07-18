@@ -31,6 +31,7 @@ alias gmdu='git checkout .'
 alias gsl='git stash list'
 #alias gco='git checkout'
 alias gdf='git diff --compact-summary'
+alias gd='git diff --ignore-space-at-eol -b -w --ignore-blank-lines --compact-summary --ignore-all-space | grep -v " 0"' #List only filenames of changes that dont include whitespaces
 alias gb='git branches | head'
 alias get='git'
 alias gr='echo "GIT REFLOG";git reflog'
@@ -122,3 +123,4 @@ alias e="vim"
 #alias eg='vim ~/.gitconfig'
 alias eb='npp ~/.bash_profile'
 alias eg='npp ~/.gitconfig'
+
