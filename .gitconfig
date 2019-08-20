@@ -24,9 +24,7 @@
 	safecrlf = false
 	editor = \"C:\\Users\\matthewellison\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe\" \"--diff\"  \"$LOCAL\" \"$REMOTE\"
 	
-[diff]
-	tool = vsdiffmerge
-	
+
 [difftool "kdiff3"]
 	cmd = \"C:\\Program Files\\kdiff3\\kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
     keepBackup = false
@@ -35,6 +33,7 @@
 	prompt = true
 
 [difftool "vscode"]
+	prompt = true
 	cmd = \"C:\\Users\\matthewellison\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe\" \"--diff\"  \"$LOCAL\" \"$REMOTE\"
 	
 [difftool "vscode2"]
@@ -51,3 +50,23 @@
 	cmd = \"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
 	keepBackup = false
 	trustExitCode = true
+	
+	
+[difftool "vscode2"]
+	cmd = "code --wait --diff $LOCAL $REMOTE"
+
+[difftool "vsdiffmerge"]
+	cmd = \"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t
+	keepBackup = false
+[merge]
+	tool = vsdiffmerge
+[mergetool]
+	prompt = true
+[mergetool "vsdiffmerge"]
+	cmd = \"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
+	keepBackup = false
+	trustExitCode = true
+
+[diff]
+	tool = vscode
+	
