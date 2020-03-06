@@ -1,0 +1,5 @@
+* -cur_console:b -cur_console:d:C:\code\Source\StrategySearch.Admin\app-v2 -cur_console:t:APPV2 -cur_console:C:%CMDER_ROOT%\icons\cmder.ico cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"
+
+>* -cur_console:bs1T65V -cur_console:d:C:\code -cur_console:t:Main -cur_console:C:%CMDER_ROOT%\icons\cmder.ico cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"
+
+* -cur_console:b -cur_console:d:C:\code2\doctorlogic_components -cur_console:t:doctorlogic_components -cur_console:C:%CMDER_ROOT%\icons\cmder.ico cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"
