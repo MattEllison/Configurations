@@ -5,3 +5,5 @@
 * -cur_console:b -cur_console:d:C:\code2\react-components -cur_console:t:React-components -cur_console:C:%CMDER_ROOT%\icons\cmder.ico cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"
 
 * -cur_console:b -cur_console:d:C:\code2\Database -cur_console:t:Database -cur_console:C:%CMDER_ROOT%\icons\cmder.ico cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"
+
+* -cur_console:b -cur_console:d:C:\code2\Science.Projects -cur_console:t:Science.Projects -cur_console:C:%CMDER_ROOT%\icons\cmder.ico cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"
