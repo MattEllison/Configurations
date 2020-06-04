@@ -19,5 +19,6 @@
         "-i"
     ],
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "extensions.ignoreRecommendations": false
 }

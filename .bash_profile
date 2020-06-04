@@ -123,7 +123,7 @@ alias e="vim"
 #alias eg='vim ~/.gitconfig'
 alias eb='npp ~/.bash_profile'
 alias eg='npp ~/.gitconfig'
-
+alias eh='npp c:\\windows\\system32\\drivers\\etc\\hosts'
 
 #Undo's changes to all files that only have new lines
 # git diff --ignore-space-at-eol -b -w --ignore-blank-lines --compact-summary --ignore-all-space | grep " 0" | sed 's/\s\+//g' | sed 's/|0//' |  while read line;do echo "$line"; done
