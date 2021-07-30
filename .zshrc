@@ -2,6 +2,8 @@
 #setopt NO_CASE_GLOB
 alias gs='git status'
 
+
+
 function gc(){
 	if test $# -eq 0; then echo -e "\e[31mNeed Commit Mesage"; return 0;fi;
 	hasUntrackedFiles=$(git status | grep 'Untracked' | wc -l);
