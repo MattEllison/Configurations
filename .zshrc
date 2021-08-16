@@ -3,7 +3,11 @@
 alias gs='git status'
 
 function gc(){
-	if test $# -eq 0; then echo -e "\e[31mNeed Commit Mesage"; return 0;fi;
+
+	if [ $# -eq 0]
+		 then echo -e "\e[31mNeed Commit Mesage"; 
+	 	return 0;
+	 fi;
 	hasUntrackedFiles=$(git status | grep 'Untracked' | wc -l);
 	hasunStagedFiles=$(git status | grep 'Changes not staged for commit' | wc -l);
 #	echo "Has Untracked Files - $hasUntrackedFiles";
