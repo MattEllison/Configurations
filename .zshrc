@@ -4,17 +4,26 @@ alias gs='git status'
 
 function gc(){
 
-	if [ $# -eq 0]
-		 then echo -e "\e[31mNeed Commit Mesage"; 
-	 	return 0;
-	 fi;
+
+	if [ $# -eq 0 ]; then
+		echo -e "\e[31mNeed Commit Mesage"
+		return 0;
+	 fi
+
+	 
 	hasUntrackedFiles=$(git status | grep 'Untracked' | wc -l);
+	
 	hasunStagedFiles=$(git status | grep 'Changes not staged for commit' | wc -l);
-#	echo "Has Untracked Files - $hasUntrackedFiles";
-#	echo "Has Unstaged files - $hasunStagedFiles"
-	if test "$hasUntrackedFiles$hasunStagedFiles" -ne "00"; then echo -e '\e[31mCanelling Commit. Looks like you forgot to add some files. \n\nRunning Git Status\n\n\e[0m';git status;return 0; fi;
+	
+	test=$(echo "$hasUntrackedFiles$hasunStagedFiles" | xargs)
+	 if [[ $test != "0 0" ]]; then 
+	 	echo -e '\e[31mCanelling Commit. Looks like you forgot to add some files. \n\nRunning Git Status\n\n\e[0m';
+	 	# git status;
+	 	return 0; 
+	 fi;
 	
 	#If all test passed
+	git commit -m "$*"
 }
 
 
