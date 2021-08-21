@@ -61,7 +61,7 @@ function bringGlobalsHome(){
 	#Git my global configs
 	#cp ~/.exrc .; #Vim configuration
 	cp ~/.zshrc ~/code/personal/Configurations; 
-	cp ~/Library/Application Support/Code/User/settings.json ~/code/personal/Configurations; 
+	cp ~/Library/Application\ Support/Code/User/settings.json ~/code/personal/Configurations; 
 	#cp ~/.gitconfig .;
     #    cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
 	#cp -r ~/functions .;
