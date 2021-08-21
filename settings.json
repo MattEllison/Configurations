@@ -1,4 +1,23 @@
 {
+    "workbench.colorTheme": "Default Dark+",
     "editor.formatOnSave": true,
-    "security.workspace.trust.untrustedFiles": "open"
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.env.*": "dotenv"
+    },
+    "aws.profile": "profile:unabated-core-api-dev",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "omnisharp.useGlobalMono": "never",
+    "workbench.tree.indent": 30,
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#fff"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
 }
