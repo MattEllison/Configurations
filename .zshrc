@@ -68,7 +68,7 @@ function bringGlobalsHome(){
 }
 
 
-function sg(){
+function saveGlobals(){
 	#Check if commit message was passed
 	local __commitMessage="$*";
 	if [ -z "$1" ]
@@ -87,4 +87,9 @@ function sg(){
 	git push;
 
 	cd $__c;
+}
+
+function updateGlobals(){
+	cp  ~/code/personal/Configurations ~/.zshrc; 
+	cp  ~/code/personal/Configurations ~/Library/Application\ Support/Code/User/settings.json; 
 }
