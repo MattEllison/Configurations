@@ -90,6 +90,6 @@ function saveGlobals(){
 }
 
 function updateGlobals(){
-	cp  ~/code/personal/Configurations ~/.zshrc; 
-	cp  ~/code/personal/Configurations ~/Library/Application\ Support/Code/User/settings.json; 
+	cp  ~/code/personal/Configurations/.zshrc ~/.zshrc; 
+	cp  ~/code/personal/Configurations/settings.json ~/Library/Application\ Support/Code/User/settings.json; 
 }
