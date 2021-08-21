@@ -1,5 +1,5 @@
-#source ~/.bash_profile
-#setopt NO_CASE_GLOB
+
+
 alias gs='git status'
 
 function gc(){
@@ -26,9 +26,8 @@ function gc(){
 	git commit -m "$*"
 }
 
-
-# case insensitive path-completion 
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
+# case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 
 autoload -U compinit
 compinit
@@ -51,3 +50,41 @@ zstyle ':vcs_info:*' enable git
 #end git stuffexport PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+export PATH="$PATH:/Users/mellison/code2/kafka_2.13-2.8.0/bin"
+
+
+function bringGlobalsHome(){
+
+	#cd /Users/mellison/code/personal/Configurations;
+	
+
+	#Git my global configs
+	#cp ~/.exrc .; #Vim configuration
+	cp ~/.zshrc ~/code/personal/Configurations; 
+	cp ~/Library/Application Support/Code/User/settings.json ~/code/personal/Configurations; 
+	#cp ~/.gitconfig .;
+    #    cp c\:/cmder\ v1.3.6\ -\ full/vendor/conemu-maximus5/conemu.xml .
+	#cp -r ~/functions .;
+}
+
+
+function sg(){
+	#Check if commit message was passed
+	local __commitMessage="$*";
+	if [ -z "$1" ]
+	then
+		__commitMessage='updated globals';
+	fi
+	
+	local __c=$(pwd);		
+
+	cd ~/code/personal/Configurations;
+
+	bringGlobalsHome
+	git pull;
+	git add .;
+	git commit -m "$__commitMessage";
+	git push;
+
+	cd $__c;
+}
